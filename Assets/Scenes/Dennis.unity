@@ -2108,11 +2108,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1330374536592042001, guid: d4a37a323b060cf43ac04af25260c83e,
-        type: 3}
-      propertyPath: m_LineWidth
-      value: 0.0025
-      objectReference: {fileID: 0}
     - target: {fileID: 1398907982973425894, guid: d4a37a323b060cf43ac04af25260c83e,
         type: 3}
       propertyPath: m_InteractionManager
@@ -2120,19 +2115,9 @@ PrefabInstance:
       objectReference: {fileID: 1756138652}
     - target: {fileID: 2716075255462924810, guid: d4a37a323b060cf43ac04af25260c83e,
         type: 3}
-      propertyPath: m_UseForceGrab
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2716075255462924810, guid: d4a37a323b060cf43ac04af25260c83e,
-        type: 3}
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 1756138652}
-    - target: {fileID: 3533041679162115755, guid: d4a37a323b060cf43ac04af25260c83e,
-        type: 3}
-      propertyPath: m_UseForceGrab
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3533041679162115755, guid: d4a37a323b060cf43ac04af25260c83e,
         type: 3}
       propertyPath: m_InteractionManager
@@ -2143,11 +2128,6 @@ PrefabInstance:
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 1756138652}
-    - target: {fileID: 7928905506386402360, guid: d4a37a323b060cf43ac04af25260c83e,
-        type: 3}
-      propertyPath: m_LineWidth
-      value: 0.0025
-      objectReference: {fileID: 0}
     - target: {fileID: 8764881177861915234, guid: d4a37a323b060cf43ac04af25260c83e,
         type: 3}
       propertyPath: m_Name
