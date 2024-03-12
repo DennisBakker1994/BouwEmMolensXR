@@ -7,7 +7,6 @@ public class BuildingCycle : MonoBehaviour
     public GameObject[] builds;
 
     int buildingStyle;
-    int i;
 
     private void Update()
     {
@@ -21,7 +20,6 @@ public class BuildingCycle : MonoBehaviour
         if (buildingStyle > 5)
         {
             buildingStyle = 0;
-            i = 0;
         } 
     }
 
@@ -32,7 +30,6 @@ public class BuildingCycle : MonoBehaviour
         if (buildingStyle < 0)
         {
             buildingStyle = 5;
-            i = 5;
 
         }
     }
@@ -45,9 +42,6 @@ public class BuildingCycle : MonoBehaviour
 
     void SetAllToFalse()
     {
-        for (i = 0; i < buildingStyle; i++)
-        {
-            builds[i].SetActive(false);
-        }
+
     }
 }
