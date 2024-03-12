@@ -112,28 +112,6 @@
                     "action": "Y Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
-                },
-                {
-                    "name": "left",
-                    "id": "d207d379-8a4d-4f48-bf94-6dd75e5ec683",
-                    "path": "",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Y Movement",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "right",
-                    "id": "eb6b51e9-7053-447e-a2f9-86fe77665d9b",
-                    "path": "",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Y Movement",
-                    "isComposite": false,
-                    "isPartOfComposite": true
                 }
             ]
         },
