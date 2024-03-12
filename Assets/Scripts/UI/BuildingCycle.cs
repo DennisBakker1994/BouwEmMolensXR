@@ -19,7 +19,7 @@ public class BuildingCycle : MonoBehaviour
 
         if (buildingStyle > 5)
         {
-            buildingStyle = 1;
+            buildingStyle = 0;
         } 
     }
 
@@ -29,7 +29,7 @@ public class BuildingCycle : MonoBehaviour
 
         if (buildingStyle < 0)
         {
-            buildingStyle = 6;
+            buildingStyle = 5;
         }
     }
 
