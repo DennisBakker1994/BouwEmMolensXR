@@ -13,6 +13,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "Y Movement",
+                    "type": "Value",
+                    "id": "bbf13185-77ce-45c8-8bd5-2e44dff014f3",
+                    "expectedControlType": "Vector3",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -68,6 +77,61 @@
                     "processors": "",
                     "groups": "",
                     "action": "ZX Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "3D Vector",
+                    "id": "371b6b4c-56d0-4d0c-a94c-68a3f1d3b385",
+                    "path": "3DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Y Movement",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "a989021e-3377-4f84-bae3-cd42f40fe4d9",
+                    "path": "<XRController>{LeftHand}/thumbstickDpadUp",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Y Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "68231a07-a636-408c-a509-7f75be556905",
+                    "path": "<XRController>{LeftHand}/thumbstickDpadDown",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Y Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "d207d379-8a4d-4f48-bf94-6dd75e5ec683",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Y Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "eb6b51e9-7053-447e-a2f9-86fe77665d9b",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Y Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
                 }

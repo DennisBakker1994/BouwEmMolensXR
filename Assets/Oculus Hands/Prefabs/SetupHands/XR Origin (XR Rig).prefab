@@ -4668,6 +4668,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: aba74823-9b2f-4671-a282-4b2746bc81e1
     m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: bbf13185-77ce-45c8-8bd5-2e44dff014f3
+    m_ActionName: Player/Y Movement
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: XR
   m_DefaultActionMap: Player
@@ -4717,7 +4721,8 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: 0}
+    m_Reference: {fileID: 6972639530819350904, guid: c348712bda248c246b8c49b3db54643f,
+      type: 3}
   m_RightHandMoveAction:
     m_UseReference: 1
     m_Action:
