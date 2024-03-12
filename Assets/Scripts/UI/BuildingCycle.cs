@@ -4,20 +4,20 @@ using UnityEngine;
 
 public class BuildingCycle : MonoBehaviour
 {
-    public GameObject build1;
-    public GameObject build2;
-    public GameObject build3;
-    public GameObject build4;
-    public GameObject build5;
-    public GameObject build6;
+    public GameObject[] builds;
 
     int buildingStyle;
+
+    private void Update()
+    {
+        SwitchBuildStyle();
+    }
 
     public void ChangeIntPlus()
     {
         buildingStyle++;
 
-        if (buildingStyle > 6)
+        if (buildingStyle > 5)
         {
             buildingStyle = 1;
         } 
@@ -27,9 +27,23 @@ public class BuildingCycle : MonoBehaviour
     {
         buildingStyle--;
 
-        if (buildingStyle < 1)
+        if (buildingStyle < 0)
         {
             buildingStyle = 6;
+        }
+    }
+
+    public void SwitchBuildStyle()
+    {
+        SetAllToFalse();
+        builds[buildingStyle].SetActive(true);
+    }
+
+    void SetAllToFalse()
+    {
+        for (int i = 0; i < buildingStyle; i++)
+        {
+            builds[i].SetActive(false);
         }
     }
 }
