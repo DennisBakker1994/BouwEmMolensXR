@@ -7,7 +7,7 @@
             "actions": [
                 {
                     "name": "ZX Movement",
-                    "type": "Value",
+                    "type": "PassThrough",
                     "id": "534bf20c-877c-4908-b21e-b438c64bea2b",
                     "expectedControlType": "Vector2",
                     "processors": "",
