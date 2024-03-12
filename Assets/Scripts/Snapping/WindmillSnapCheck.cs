@@ -6,9 +6,9 @@ public class WindmillSnapCheck : MonoBehaviour
 {
     public enum Part
     {
+        BOTTOM,
         TOP,
-        MID,
-        BOTTOM
+        WINDMILLBLADES
     }
 
     public Part part;
@@ -26,14 +26,28 @@ public class WindmillSnapCheck : MonoBehaviour
     {
         switch (part)
         {
-            case Part.TOP:
-                // do this;
-                break;
-            case Part.MID:
-                // do this;
-                break;
             case Part.BOTTOM:
-                // do this;
+                //do this;
+                break;
+            case Part.TOP:
+                //if (Part.BOTTOM == part)
+                //{
+                //    canSnap;
+                //}
+                //else
+                //{
+                //    !canSnap;
+                //}
+                break;
+            case Part.WINDMILLBLADES:
+                //if (Part.TOP == part)
+                //{
+                //    canSnap;
+                //}
+                //else
+                //{
+                //    !canSnap;
+                //}
                 break;
             default:
                 // do this if nothing else triggers.
@@ -46,10 +60,24 @@ public class WindmillSnapCheck : MonoBehaviour
         switch (era)
         {
             case Era.TRADITIONAL:
-                //do this;
+                //if (Era.TRADITIONAL == era)
+                //{
+                //    canSnap;
+                //}
+                //else
+                //{
+                //    !canSnap;
+                //}
                 break;
             case Era.MODERN:
-                //do this;
+                //if (Era.MODERN == era)
+                //{
+                //    canSnap;
+                //}
+                //else
+                //{
+                //    !canSnap;
+                //}
                 break;
             default:
                 //do tis if nothing else triggers.
