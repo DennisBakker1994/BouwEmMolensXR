@@ -298,65 +298,34 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8764881177861915234, guid: d4a37a323b060cf43ac04af25260c83e,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 971837566}
+      addedObject: {fileID: 849137278}
   m_SourcePrefab: {fileID: 100100000, guid: d4a37a323b060cf43ac04af25260c83e, type: 3}
---- !u!1 &971837556 stripped
+--- !u!1 &849137276 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8764881177861915234, guid: d4a37a323b060cf43ac04af25260c83e,
     type: 3}
   m_PrefabInstance: {fileID: 849137275}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &971837560 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3515686908858815930, guid: d4a37a323b060cf43ac04af25260c83e,
+--- !u!143 &849137277 stripped
+CharacterController:
+  m_CorrespondingSourceObject: {fileID: 918722091533414715, guid: d4a37a323b060cf43ac04af25260c83e,
     type: 3}
   m_PrefabInstance: {fileID: 849137275}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 971837556}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03a5df2202a8b96488c744be3bd0c33e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &971837566
+--- !u!114 &849137278
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 971837556}
+  m_GameObject: {fileID: 849137276}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 919e39492806b334982b6b84c90dd927, type: 3}
+  m_Script: {fileID: 11500000, guid: 6787fc40817bb454394c4c00afd4c842, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_System: {fileID: 971837560}
-  m_TurnSpeed: 60
-  m_LeftHandTurnAction:
-    m_UseReference: 1
-    m_Action:
-      m_Name: Left Hand Turn
-      m_Type: 0
-      m_ExpectedControlType: Vector2
-      m_Id: 7937a4a1-90ff-4910-b4d0-168eecdbfd64
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: 1010738217276881514, guid: c348712bda248c246b8c49b3db54643f,
-      type: 3}
-  m_RightHandTurnAction:
-    m_UseReference: 0
-    m_Action:
-      m_Name: Right Hand Turn
-      m_Type: 0
-      m_ExpectedControlType: Vector2
-      m_Id: ecf45671-6385-4d7e-b70b-1a2d41c7946f
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: 0}
+  character: {fileID: 849137277}
+  moveSpeed: 1
 --- !u!1 &1576307094
 GameObject:
   m_ObjectHideFlags: 0
