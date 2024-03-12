@@ -286,21 +286,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6524412529312355889, guid: d4a37a323b060cf43ac04af25260c83e,
-        type: 3}
-      propertyPath: m_HeadTransform
-      value: 
-      objectReference: {fileID: 849137280}
-    - target: {fileID: 6524412529312355889, guid: d4a37a323b060cf43ac04af25260c83e,
-        type: 3}
-      propertyPath: m_LeftControllerTransform
-      value: 
-      objectReference: {fileID: 849137278}
-    - target: {fileID: 6524412529312355889, guid: d4a37a323b060cf43ac04af25260c83e,
-        type: 3}
-      propertyPath: m_RightControllerTransform
-      value: 
-      objectReference: {fileID: 849137277}
     - target: {fileID: 8764881177861915234, guid: d4a37a323b060cf43ac04af25260c83e,
         type: 3}
       propertyPath: m_Name
@@ -309,62 +294,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8764881177861915234, guid: d4a37a323b060cf43ac04af25260c83e,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 849137281}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4a37a323b060cf43ac04af25260c83e, type: 3}
---- !u!1 &849137276 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8764881177861915234, guid: d4a37a323b060cf43ac04af25260c83e,
-    type: 3}
-  m_PrefabInstance: {fileID: 849137275}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &849137277 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5198590589739989798, guid: d4a37a323b060cf43ac04af25260c83e,
-    type: 3}
-  m_PrefabInstance: {fileID: 849137275}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &849137278 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7783509914861450264, guid: d4a37a323b060cf43ac04af25260c83e,
-    type: 3}
-  m_PrefabInstance: {fileID: 849137275}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &849137280 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2605492879514144931, guid: d4a37a323b060cf43ac04af25260c83e,
-    type: 3}
-  m_PrefabInstance: {fileID: 849137275}
-  m_PrefabAsset: {fileID: 0}
---- !u!143 &849137281
-CharacterController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 849137276}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Height: 2
-  m_Radius: 0.5
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!1 &1576307094
 GameObject:
   m_ObjectHideFlags: 0
