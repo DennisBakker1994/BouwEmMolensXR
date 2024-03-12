@@ -4528,6 +4528,7 @@ GameObject:
   - component: {fileID: 6524412529312355889}
   - component: {fileID: 918722091533414715}
   - component: {fileID: 8535051422240975422}
+  - component: {fileID: 2705074185203423457}
   m_Layer: 6
   m_Name: XR Origin (XR Rig)
   m_TagString: Untagged
@@ -4706,8 +4707,8 @@ MonoBehaviour:
   m_System: {fileID: 3515686908858815930}
   m_MoveSpeed: 1
   m_EnableStrafe: 1
-  m_EnableFly: 0
-  m_UseGravity: 1
+  m_EnableFly: 1
+  m_UseGravity: 0
   m_GravityApplicationMode: 1
   m_ForwardSource: {fileID: 2605492879514144931}
   m_LeftHandMoveAction:
@@ -4721,7 +4722,7 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: 6972639530819350904, guid: c348712bda248c246b8c49b3db54643f,
+    m_Reference: {fileID: -6521406267165800849, guid: 367fcc0ef6786a84f9ad53895f03cf02,
       type: 3}
   m_RightHandMoveAction:
     m_UseReference: 1
@@ -4739,7 +4740,7 @@ MonoBehaviour:
   m_HeadTransform: {fileID: 2605492879514144931}
   m_LeftControllerTransform: {fileID: 7783509914861450264}
   m_RightControllerTransform: {fileID: 5198590589739989798}
-  m_LeftHandMovementDirection: 0
+  m_LeftHandMovementDirection: 1
   m_RightHandMovementDirection: 0
 --- !u!143 &918722091533414715
 CharacterController:
@@ -4782,6 +4783,45 @@ MonoBehaviour:
   m_LocomotionProvider: {fileID: 6524412529312355889}
   m_MinHeight: 0
   m_MaxHeight: Infinity
+--- !u!114 &2705074185203423457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8764881177861915234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 919e39492806b334982b6b84c90dd927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_System: {fileID: 3515686908858815930}
+  m_TurnSpeed: 60
+  m_LeftHandTurnAction:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Left Hand Turn
+      m_Type: 0
+      m_ExpectedControlType: Vector2
+      m_Id: 7937a4a1-90ff-4910-b4d0-168eecdbfd64
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 1010738217276881514, guid: c348712bda248c246b8c49b3db54643f,
+      type: 3}
+  m_RightHandTurnAction:
+    m_UseReference: 0
+    m_Action:
+      m_Name: Right Hand Turn
+      m_Type: 0
+      m_ExpectedControlType: Vector2
+      m_Id: ecf45671-6385-4d7e-b70b-1a2d41c7946f
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 0}
 --- !u!1 &9213818222922543813
 GameObject:
   m_ObjectHideFlags: 0
