@@ -2,7 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WindmillSnapCheck : MonoBehaviour
+
+public class WindmillInformation : MonoBehaviour
 {
     public enum Part
     {
