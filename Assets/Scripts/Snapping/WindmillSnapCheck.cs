@@ -6,6 +6,7 @@ public class WindmillSnapCheck : MonoBehaviour
 {
     public enum Part
     {
+        PLACEMENT,
         BOTTOM,
         TOP,
         WINDMILLBLADES
@@ -21,33 +22,44 @@ public class WindmillSnapCheck : MonoBehaviour
 
     public Era era;
 
+    [Header("Variables")]
+    public bool canSnap;
+    public bool isSameEra;
+
 
     public void CheckIfCanSnap()
     {
         switch (part)
         {
             case Part.BOTTOM:
-                //do this;
+                if (Part.PLACEMENT == part)
+                {
+                    canSnap = true;
+                }
+                else
+                {
+                    canSnap = false;
+                }
                 break;
             case Part.TOP:
-                //if (Part.BOTTOM == part)
-                //{
-                //    canSnap;
-                //}
-                //else
-                //{
-                //    !canSnap;
-                //}
+                if (Part.BOTTOM == part)
+                {
+                    canSnap = true;
+                }
+                else
+                {
+                    canSnap = false;
+                }
                 break;
             case Part.WINDMILLBLADES:
-                //if (Part.TOP == part)
-                //{
-                //    canSnap;
-                //}
-                //else
-                //{
-                //    !canSnap;
-                //}
+                if (Part.TOP == part)
+                {
+                    canSnap = true;
+                }
+                else
+                {
+                    canSnap = false;
+                }
                 break;
             default:
                 // do this if nothing else triggers.
@@ -60,28 +72,36 @@ public class WindmillSnapCheck : MonoBehaviour
         switch (era)
         {
             case Era.TRADITIONAL:
-                //if (Era.TRADITIONAL == era)
-                //{
-                //    canSnap;
-                //}
-                //else
-                //{
-                //    !canSnap;
-                //}
+                if (Era.TRADITIONAL == era)
+                {
+                    isSameEra = true;
+                }
+                else
+                {
+                    isSameEra = false;
+                }
                 break;
             case Era.MODERN:
-                //if (Era.MODERN == era)
-                //{
-                //    canSnap;
-                //}
-                //else
-                //{
-                //    !canSnap;
-                //}
+                if (Era.MODERN == era)
+                {
+                    isSameEra = true;
+                }
+                else
+                {
+                    isSameEra = false;
+                }
                 break;
             default:
-                //do tis if nothing else triggers.
+                //do this if nothing else triggers.
                 break;
+        }
+    }
+
+    public void SnapPart()
+    {
+        if (canSnap == true && isSameEra == true)
+        {
+            //AllowSnappingToHappen
         }
     }
 }
