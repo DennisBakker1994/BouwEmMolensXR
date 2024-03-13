@@ -4708,7 +4708,7 @@ MonoBehaviour:
   m_System: {fileID: 3515686908858815930}
   m_MoveSpeed: 1
   m_EnableStrafe: 1
-  m_EnableFly: 1
+  m_EnableFly: 0
   m_UseGravity: 0
   m_GravityApplicationMode: 1
   m_ForwardSource: {fileID: 2605492879514144931}
