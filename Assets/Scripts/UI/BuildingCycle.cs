@@ -39,7 +39,7 @@ public class BuildingCycle : MonoBehaviour
     {
         for (int i = 0; i <= builds.Length; i++)
         {
-            builds[i].SetActive(false);
+            builds[i - 1].SetActive(false);
         }
     }
 }
