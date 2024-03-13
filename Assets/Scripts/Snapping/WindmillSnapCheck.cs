@@ -97,11 +97,14 @@ public class WindmillSnapCheck : MonoBehaviour
         }
     }
 
-    public void SnapPart()
+    public void AllowSnapPart()
     {
-        if (canSnap == true && isSameEra == true)
+        if (isSameEra == true)
         {
-            //AllowSnappingToHappen
+            if (canSnap == true)
+            {
+                //AllowSnappingToHappen
+            }
         }
     }
 }
