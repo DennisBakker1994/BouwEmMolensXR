@@ -42,6 +42,9 @@ public class BuildingCycle : MonoBehaviour
 
     void SetAllToFalse()
     {
-
+        for (int i = 0; i <= builds.Length; i++)
+        {
+            builds[buildingStyle].SetActive(false);
+        }
     }
 }
