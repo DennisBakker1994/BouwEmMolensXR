@@ -8,11 +8,6 @@ public class BuildingCycle : MonoBehaviour
 
     int buildingStyle;
 
-    private void Update()
-    {
-        SwitchBuildStyle();
-    }
-
     public void ChangeIntPlus()
     {
         buildingStyle++;
@@ -20,7 +15,10 @@ public class BuildingCycle : MonoBehaviour
         if (buildingStyle > 5)
         {
             buildingStyle = 0;
-        } 
+        }
+
+        SetAllToFalse();
+        builds[buildingStyle].SetActive(true);
     }
 
     public void ChangeIntMinus()
@@ -32,10 +30,7 @@ public class BuildingCycle : MonoBehaviour
             buildingStyle = 5;
 
         }
-    }
 
-    public void SwitchBuildStyle()
-    {
         SetAllToFalse();
         builds[buildingStyle].SetActive(true);
     }
@@ -44,7 +39,7 @@ public class BuildingCycle : MonoBehaviour
     {
         for (int i = 0; i <= builds.Length; i++)
         {
-            builds[buildingStyle].SetActive(false);
+            builds[i].SetActive(false);
         }
     }
 }
