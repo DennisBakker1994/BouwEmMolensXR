@@ -20,7 +20,7 @@ public class BuildingCycle : MonoBehaviour
 
         if (buildingStyle == 5)
         {
-            buildingStyle = 0;
+            buildingStyle = -1;
         }
 
         buildingStyle++;
@@ -32,9 +32,9 @@ public class BuildingCycle : MonoBehaviour
     public void ChangeIntMinus()
     {
 
-        if (buildingStyle < 0)
+        if (buildingStyle == 0)
         {
-            buildingStyle = 5;
+            buildingStyle = 6;
 
         }
 
