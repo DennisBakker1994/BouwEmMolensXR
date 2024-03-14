@@ -38,9 +38,9 @@ public partial class @Movement: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""Y Movement"",
-                    ""type"": ""Value"",
+                    ""type"": ""PassThrough"",
                     ""id"": ""bbf13185-77ce-45c8-8bd5-2e44dff014f3"",
-                    ""expectedControlType"": ""Vector3"",
+                    ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
@@ -103,9 +103,9 @@ public partial class @Movement: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": true
                 },
                 {
-                    ""name"": ""3D Vector"",
+                    ""name"": ""2D Vector"",
                     ""id"": ""371b6b4c-56d0-4d0c-a94c-68a3f1d3b385"",
-                    ""path"": ""3DVector"",
+                    ""path"": ""2DVector"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -114,7 +114,7 @@ public partial class @Movement: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 },
                 {
-                    ""name"": ""up"",
+                    ""name"": ""Up"",
                     ""id"": ""a989021e-3377-4f84-bae3-cd42f40fe4d9"",
                     ""path"": ""<XRController>{LeftHand}/thumbstickDpadUp"",
                     ""interactions"": """",
@@ -125,7 +125,7 @@ public partial class @Movement: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": true
                 },
                 {
-                    ""name"": ""down"",
+                    ""name"": ""Down"",
                     ""id"": ""68231a07-a636-408c-a509-7f75be556905"",
                     ""path"": ""<XRController>{LeftHand}/thumbstickDpadDown"",
                     ""interactions"": """",

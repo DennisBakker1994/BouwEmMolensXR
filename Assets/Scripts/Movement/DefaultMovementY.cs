@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Numerics;
+using Unity.VisualScripting;
 using UnityEditor.ShaderGraph;
 using UnityEngine;
 using UnityEngine.TextCore.Text;
@@ -8,18 +10,22 @@ using UnityEngine.UIElements;
 public class DefaultMovementY : MonoBehaviour
 {
     private Movement controls;
-    private float move = 0;
+    private UnityEngine.Vector3 move; 
     public CharacterController character;
-    public float moveSpeed;
+    public float moveSpeed = 1f;
+
 
     public void Start()
     {
         controls = new Movement();
+        
     }
 
     public void PlayerUpDown()
     {
-        move = controls.Player.YMovement.ReadValue<float>();
+        move = controls.Player.YMovement.ReadValue<UnityEngine.Vector3>();
+        UnityEngine.Vector3 movement = (move.y * transform.up);
+        character.Move(movement * moveSpeed * Time.deltaTime);
     }
 
     public void Update()
