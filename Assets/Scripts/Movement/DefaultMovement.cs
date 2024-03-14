@@ -18,7 +18,7 @@ public class DefaultMovement : MonoBehaviour
 
     public void PlayerMovement()
     {
-        move = controls.Player.ZXMovement.ReadValue<Vector2>();
+        //move = controls.Player.ZXMovement.ReadValue<Vector2>();
         Vector3 movement = (move.y * transform.forward) + (move.x * transform.right);
         character.Move(movement * moveSpeed * Time.deltaTime);
 

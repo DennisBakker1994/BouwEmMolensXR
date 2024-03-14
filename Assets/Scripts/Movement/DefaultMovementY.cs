@@ -23,7 +23,7 @@ public class DefaultMovementY : MonoBehaviour
 
     public void PlayerUpDown()
     {
-        move = controls.Player.YMovement.ReadValue<UnityEngine.Vector3>();
+        //move = controls.Player.YMovement.ReadValue<UnityEngine.Vector3>();
         UnityEngine.Vector3 movement = (move.y * transform.up);
         character.Move(movement * moveSpeed * Time.deltaTime);
     }

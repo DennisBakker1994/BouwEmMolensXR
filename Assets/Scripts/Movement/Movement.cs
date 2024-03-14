@@ -28,112 +28,26 @@ public partial class @Movement: IInputActionCollection2, IDisposable
             ""id"": ""347a206f-91fa-485b-bb4c-389c27ffe762"",
             ""actions"": [
                 {
-                    ""name"": ""ZX Movement"",
-                    ""type"": ""PassThrough"",
-                    ""id"": ""534bf20c-877c-4908-b21e-b438c64bea2b"",
-                    ""expectedControlType"": ""Vector2"",
+                    ""name"": ""UpAndDown"",
+                    ""type"": ""Button"",
+                    ""id"": ""6ddab38b-1772-4c5e-afa8-3d2068337a13"",
+                    ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
-                    ""initialStateCheck"": true
-                },
-                {
-                    ""name"": ""Y Movement"",
-                    ""type"": ""PassThrough"",
-                    ""id"": ""bbf13185-77ce-45c8-8bd5-2e44dff014f3"",
-                    ""expectedControlType"": ""Vector2"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": true
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
                 {
-                    ""name"": ""2D Vector"",
-                    ""id"": ""58d661de-5cfc-4f71-a76f-7e99827b7ba8"",
-                    ""path"": ""2DVector"",
+                    ""name"": """",
+                    ""id"": ""4fd3c533-2346-497a-92c0-da65c71d764d"",
+                    ""path"": ""<XRController>{LeftHand}/{Secondary2DAxisClick}"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""ZX Movement"",
-                    ""isComposite"": true,
+                    ""action"": ""UpAndDown"",
+                    ""isComposite"": false,
                     ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""up"",
-                    ""id"": ""a65e5e7e-47ff-4857-b7d7-64d03db175fd"",
-                    ""path"": ""<XRController>{RightHand}/thumbstickDpadUp"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""ZX Movement"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""down"",
-                    ""id"": ""107079bf-c78e-4426-81e1-44e821ef3014"",
-                    ""path"": ""<XRController>{RightHand}/thumbstickDpadDown"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""ZX Movement"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""left"",
-                    ""id"": ""fef96ec1-3524-413a-962b-0f53fffb1d01"",
-                    ""path"": ""<XRController>{RightHand}/thumbstickDpadLeft"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""ZX Movement"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""right"",
-                    ""id"": ""feeac0d3-8166-4d58-91ae-7de2e1b140e4"",
-                    ""path"": ""<XRController>{RightHand}/thumbstickDpadRight"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""ZX Movement"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""2D Vector"",
-                    ""id"": ""371b6b4c-56d0-4d0c-a94c-68a3f1d3b385"",
-                    ""path"": ""2DVector"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Y Movement"",
-                    ""isComposite"": true,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""Up"",
-                    ""id"": ""a989021e-3377-4f84-bae3-cd42f40fe4d9"",
-                    ""path"": ""<XRController>{LeftHand}/thumbstickDpadUp"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Y Movement"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""Down"",
-                    ""id"": ""68231a07-a636-408c-a509-7f75be556905"",
-                    ""path"": ""<XRController>{LeftHand}/thumbstickDpadDown"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Y Movement"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
                 }
             ]
         },
@@ -719,8 +633,7 @@ public partial class @Movement: IInputActionCollection2, IDisposable
 }");
         // Player
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
-        m_Player_ZXMovement = m_Player.FindAction("ZX Movement", throwIfNotFound: true);
-        m_Player_YMovement = m_Player.FindAction("Y Movement", throwIfNotFound: true);
+        m_Player_UpAndDown = m_Player.FindAction("UpAndDown", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -794,14 +707,12 @@ public partial class @Movement: IInputActionCollection2, IDisposable
     // Player
     private readonly InputActionMap m_Player;
     private List<IPlayerActions> m_PlayerActionsCallbackInterfaces = new List<IPlayerActions>();
-    private readonly InputAction m_Player_ZXMovement;
-    private readonly InputAction m_Player_YMovement;
+    private readonly InputAction m_Player_UpAndDown;
     public struct PlayerActions
     {
         private @Movement m_Wrapper;
         public PlayerActions(@Movement wrapper) { m_Wrapper = wrapper; }
-        public InputAction @ZXMovement => m_Wrapper.m_Player_ZXMovement;
-        public InputAction @YMovement => m_Wrapper.m_Player_YMovement;
+        public InputAction @UpAndDown => m_Wrapper.m_Player_UpAndDown;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -811,22 +722,16 @@ public partial class @Movement: IInputActionCollection2, IDisposable
         {
             if (instance == null || m_Wrapper.m_PlayerActionsCallbackInterfaces.Contains(instance)) return;
             m_Wrapper.m_PlayerActionsCallbackInterfaces.Add(instance);
-            @ZXMovement.started += instance.OnZXMovement;
-            @ZXMovement.performed += instance.OnZXMovement;
-            @ZXMovement.canceled += instance.OnZXMovement;
-            @YMovement.started += instance.OnYMovement;
-            @YMovement.performed += instance.OnYMovement;
-            @YMovement.canceled += instance.OnYMovement;
+            @UpAndDown.started += instance.OnUpAndDown;
+            @UpAndDown.performed += instance.OnUpAndDown;
+            @UpAndDown.canceled += instance.OnUpAndDown;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
         {
-            @ZXMovement.started -= instance.OnZXMovement;
-            @ZXMovement.performed -= instance.OnZXMovement;
-            @ZXMovement.canceled -= instance.OnZXMovement;
-            @YMovement.started -= instance.OnYMovement;
-            @YMovement.performed -= instance.OnYMovement;
-            @YMovement.canceled -= instance.OnYMovement;
+            @UpAndDown.started -= instance.OnUpAndDown;
+            @UpAndDown.performed -= instance.OnUpAndDown;
+            @UpAndDown.canceled -= instance.OnUpAndDown;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -1009,8 +914,7 @@ public partial class @Movement: IInputActionCollection2, IDisposable
     }
     public interface IPlayerActions
     {
-        void OnZXMovement(InputAction.CallbackContext context);
-        void OnYMovement(InputAction.CallbackContext context);
+        void OnUpAndDown(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {
