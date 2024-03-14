@@ -11,6 +11,7 @@ public class SnapManager : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("Entered Trigger");
         CheckIfCanSnap(other.gameObject.GetComponent<WindmillInformation>());
         AllowSnapPartTraditional(other.gameObject.GetComponent<WindmillInformation>());
         AllowSnapPartModern(other.gameObject.GetComponent<WindmillInformation>());
