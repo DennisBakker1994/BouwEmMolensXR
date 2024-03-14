@@ -8,51 +8,53 @@ public class SnapManager : MonoBehaviour
     public bool canSnap;
     public GameObject parentToSnap;
     public GameObject snappingPoint;
+    public Transform transformToSnap;
+
+    public WindmillInformation.Part otherPart;
+    public WindmillInformation.Era otherEra;
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Entered Trigger");
-        CheckIfCanSnap(other.gameObject.GetComponent<WindmillInformation>());
-        AllowSnapPartTraditional(other.gameObject.GetComponent<WindmillInformation>());
-        AllowSnapPartModern(other.gameObject.GetComponent<WindmillInformation>());
+
+        otherPart = other.gameObject.GetComponentInParent<WindmillInformation>().part;
+        otherEra = other.gameObject.GetComponentInParent<WindmillInformation>().era;
+        transformToSnap = other.gameObject.transform;
+        CheckIfCanSnap();
     }
 
-    public void CheckIfCanSnap(WindmillInformation partCheck)
+    public void CheckIfCanSnap()
     {
+        Debug.Log("Trying to Snap");
         canSnap = false;
-        switch (partCheck.part)
-        {
-            case WindmillInformation.Part.TOP:
-                if (WindmillInformation.Part.BOTTOM == partCheck.part)
-                {
-                    Debug.Log("Can Snap.");
-                    canSnap = true;
 
-                }
-                break;
-            case WindmillInformation.Part.WINDMILLBLADES:
-                if (WindmillInformation.Part.TOP == partCheck.part)
-                {
-                    Debug.Log("Can Snap.");
-                    canSnap = true;
-                }
-                break;
-            default:
-                // do this if nothing else triggers.
-                break;
+        if (this.GetComponentInParent<WindmillInformation>().part == WindmillInformation.Part.BOTTOM && otherPart == WindmillInformation.Part.TOP)
+        {
+            Debug.Log("Can Snap.");
+            canSnap = true;
+           
+            if (this.GetComponentInParent<WindmillInformation>().era == WindmillInformation.Era.TRADITIONAL)
+            {
+                AllowSnapPartTraditional();
+            }
         }
     }
 
-    public void AllowSnapPartTraditional(WindmillInformation eraCheck)
+    public void AllowSnapPartTraditional()
     {
-        if (WindmillInformation.Era.TRADITIONAL == eraCheck.era)
+        if (otherEra == WindmillInformation.Era.TRADITIONAL)
         {
             if (canSnap == true)
             {
-                Debug.Log("Snapped");
-                gameObject.transform.position = snappingPoint.transform.position;
+                Debug.Log(transformToSnap.GetComponent<Rigidbody>().isKinematic);
+                transformToSnap.transform.position = snappingPoint.transform.position;
+                transformToSnap.GetComponent<Rigidbody>().isKinematic = true;
                 parentToSnap.transform.SetParent(gameObject.transform);
             }
+        }
+        else
+        {
+            Debug.Log("Wrong Era");
+            canSnap = false;
         }
     }
 
@@ -62,7 +64,8 @@ public class SnapManager : MonoBehaviour
         {
             if (canSnap == true)
             {
-                Debug.Log("Snapped");
+                transformToSnap.GetComponent<Rigidbody>().isKinematic = true;
+                Debug.Log(transformToSnap.GetComponent<Rigidbody>().isKinematic);
                 gameObject.transform.position = snappingPoint.transform.position;
                 parentToSnap.transform.SetParent(gameObject.transform);
             }
