@@ -23,7 +23,7 @@ public class BuildingCycle : MonoBehaviour
             buildingStyle = -1;
         }
 
-        buildingStyle++;
+        buildingStyle += 1;
 
         SetAllToFalse();
         builds[buildingStyle].SetActive(true);
@@ -38,7 +38,7 @@ public class BuildingCycle : MonoBehaviour
 
         }
 
-        buildingStyle--;
+        buildingStyle -= 1;
 
         SetAllToFalse();
         builds[buildingStyle].SetActive(true);
