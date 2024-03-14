@@ -4,15 +4,6 @@ using UnityEngine;
 
 public class SnapManager : MonoBehaviour
 {
-    //[Header("Part Enums")]
-    //WindmillInformation.Part bottomPart = WindmillInformation.Part.BOTTOM;
-    //WindmillInformation.Part topPart = WindmillInformation.Part.TOP;
-    //WindmillInformation.Part windmillBladePart = WindmillInformation.Part.WINDMILLBLADES;
-
-    //[Header("Era Enums")]
-    //WindmillInformation.Era traditionalEra = WindmillInformation.Era.TRADITIONAL;
-    //WindmillInformation.Era modernEra = WindmillInformation.Era.MODERN;
-
     [Header("Variable")]
     public bool canSnap;
 
