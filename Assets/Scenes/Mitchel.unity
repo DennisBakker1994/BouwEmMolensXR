@@ -4786,7 +4786,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Molen 5
+  m_text: Molen 6
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 73776455c0e3dc94cba9d2efabe02061, type: 2}
   m_sharedMaterial: {fileID: 5565626067635888886, guid: 73776455c0e3dc94cba9d2efabe02061,
@@ -9196,12 +9196,7 @@ MonoBehaviour:
   - {fileID: 1450578801}
   - {fileID: 381930471}
   - {fileID: 1994995072}
-  build1: {fileID: 1641678142}
-  build2: {fileID: 95666680}
-  build3: {fileID: 1153368197}
-  build4: {fileID: 1450578801}
-  build5: {fileID: 381930471}
-  build6: {fileID: 1994995072}
+  buildingStyle: 0
 --- !u!1 &1492580239
 GameObject:
   m_ObjectHideFlags: 0
