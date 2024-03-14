@@ -16,19 +16,19 @@ public class SnapManager : MonoBehaviour
     [Header("Variable")]
     public bool canSnap;
 
-    public void CheckIfCanSnap(WindmillInformation windmillInformation)
+    public void CheckIfCanSnap(WindmillInformation partCheck)
     {
         canSnap = false;
-        switch (windmillInformation.part)
+        switch (partCheck.part)
         {
             case WindmillInformation.Part.TOP:
-                if (WindmillInformation.Part.BOTTOM == windmillInformation.part)
+                if (WindmillInformation.Part.BOTTOM == partCheck.part)
                 {
                     canSnap = true;
                 }
                 break;
             case WindmillInformation.Part.WINDMILLBLADES:
-                if (WindmillInformation.Part.TOP == windmillInformation.part)
+                if (WindmillInformation.Part.TOP == partCheck.part)
                 {
                     canSnap = true;
                 }
@@ -36,6 +36,28 @@ public class SnapManager : MonoBehaviour
             default:
                 // do this if nothing else triggers.
                 break;
+        }
+    }
+
+    public void AllowSnapPartTraditional(WindmillInformation eraCheck)
+    {
+        if (WindmillInformation.Era.TRADITIONAL == eraCheck.era)
+        {
+            if (canSnap == true)
+            {
+                //AllowSnappingToHappen
+            }
+        }
+    }
+
+    public void AllowSnapPartModern(WindmillInformation eraCheck)
+    {
+        if (WindmillInformation.Era.MODERN == eraCheck.era)
+        {
+            if (canSnap == true)
+            {
+                //AllowSnappingToHappen
+            }
         }
     }
 }
