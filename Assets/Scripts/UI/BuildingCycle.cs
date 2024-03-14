@@ -21,12 +21,19 @@ public class BuildingCycle : MonoBehaviour
         if (buildingStyle == 5)
         {
             buildingStyle = -1;
+
+            buildingStyle += 1;
+
+            SetAllToFalse();
+            builds[buildingStyle].SetActive(true);
         }
+        else
+        {
+            buildingStyle += 1;
 
-        buildingStyle += 1;
-
-        SetAllToFalse();
-        builds[buildingStyle].SetActive(true);
+            SetAllToFalse();
+            builds[buildingStyle].SetActive(true);
+        }
     }
 
     public void ChangeIntMinus()
@@ -36,12 +43,19 @@ public class BuildingCycle : MonoBehaviour
         {
             buildingStyle = 6;
 
+            buildingStyle -= 1;
+
+            SetAllToFalse();
+            builds[buildingStyle].SetActive(true);
+
         }
+        else
+        {
+            buildingStyle -= 1;
 
-        buildingStyle -= 1;
-
-        SetAllToFalse();
-        builds[buildingStyle].SetActive(true);
+            SetAllToFalse();
+            builds[buildingStyle].SetActive(true);
+        }
     }
 
     void SetAllToFalse()
