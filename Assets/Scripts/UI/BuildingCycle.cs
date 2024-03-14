@@ -6,23 +6,14 @@ public class BuildingCycle : MonoBehaviour
 {
     public GameObject[] builds;
 
-    public GameObject build1;
-    public GameObject build2;
-    public GameObject build3;
-    public GameObject build4;
-    public GameObject build5;
-    public GameObject build6;
-
-    int buildingStyle;
+    public int buildingStyle;
 
     public void ChangeIntPlus()
     {
 
-        if (buildingStyle == 5)
+        if (buildingStyle == builds.Length -1)
         {
-            buildingStyle = -1;
-
-            buildingStyle += 1;
+            buildingStyle = 0;
 
             SetAllToFalse();
             builds[buildingStyle].SetActive(true);
@@ -31,7 +22,7 @@ public class BuildingCycle : MonoBehaviour
         }
         else
         {
-            buildingStyle += 1;
+            buildingStyle ++;
 
             SetAllToFalse();
             builds[buildingStyle].SetActive(true);
@@ -44,9 +35,7 @@ public class BuildingCycle : MonoBehaviour
 
         if (buildingStyle == 0)
         {
-            buildingStyle = 6;
-
-            buildingStyle -= 1;
+            buildingStyle = builds.Length -1;
 
             SetAllToFalse();
             builds[buildingStyle].SetActive(true);
@@ -54,7 +43,7 @@ public class BuildingCycle : MonoBehaviour
         }
         else
         {
-            buildingStyle -= 1;
+            buildingStyle --;
 
             SetAllToFalse();
             builds[buildingStyle].SetActive(true);
@@ -63,11 +52,9 @@ public class BuildingCycle : MonoBehaviour
 
     void SetAllToFalse()
     {
-        build1.SetActive(false);
-        build2.SetActive(false);
-        build3.SetActive(false);
-        build4.SetActive(false);
-        build5.SetActive(false);
-        build6.SetActive(false);
+        foreach (GameObject go in builds)
+        {
+            go.SetActive(false);
+        }
     }
 }
