@@ -24,6 +24,7 @@ public class SnapManager : MonoBehaviour
             case WindmillInformation.Part.TOP:
                 if (WindmillInformation.Part.BOTTOM == partCheck.part)
                 {
+                    Debug.Log("Can Snap.");
                     canSnap = true;
 
                 }
@@ -31,6 +32,7 @@ public class SnapManager : MonoBehaviour
             case WindmillInformation.Part.WINDMILLBLADES:
                 if (WindmillInformation.Part.TOP == partCheck.part)
                 {
+                    Debug.Log("Can Snap.");
                     canSnap = true;
                 }
                 break;
@@ -46,6 +48,7 @@ public class SnapManager : MonoBehaviour
         {
             if (canSnap == true)
             {
+                Debug.Log("Snapped");
                 gameObject.transform.position = snappingPoint.transform.position;
                 parentToSnap.transform.SetParent(gameObject.transform);
             }
@@ -58,6 +61,7 @@ public class SnapManager : MonoBehaviour
         {
             if (canSnap == true)
             {
+                Debug.Log("Snapped");
                 gameObject.transform.position = snappingPoint.transform.position;
                 parentToSnap.transform.SetParent(gameObject.transform);
             }
