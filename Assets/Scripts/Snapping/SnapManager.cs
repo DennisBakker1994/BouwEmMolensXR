@@ -24,17 +24,35 @@ public class SnapManager : MonoBehaviour
 
     public void CheckIfCanSnap()
     {
-        Debug.Log("Trying to Snap");
         canSnap = false;
 
         if (this.GetComponentInParent<WindmillInformation>().part == WindmillInformation.Part.BOTTOM && otherPart == WindmillInformation.Part.TOP)
         {
-            Debug.Log("Can Snap.");
             canSnap = true;
            
             if (this.GetComponentInParent<WindmillInformation>().era == WindmillInformation.Era.TRADITIONAL)
             {
                 AllowSnapPartTraditional();
+            }
+
+            if (this.GetComponentInParent<WindmillInformation>().era == WindmillInformation.Era.MODERN)
+            {
+                AllowSnapPartModern();
+            }
+        }
+
+        if (this.GetComponentInParent<WindmillInformation>().part == WindmillInformation.Part.TOP && otherPart == WindmillInformation.Part.WINDMILLBLADES)
+        {
+            canSnap = true;
+
+            if (this.GetComponentInParent<WindmillInformation>().era == WindmillInformation.Era.TRADITIONAL)
+            {
+                AllowSnapPartTraditional();
+            }
+
+            if (this.GetComponentInParent<WindmillInformation>().era == WindmillInformation.Era.MODERN)
+            {
+                AllowSnapPartModern();
             }
         }
     }
@@ -45,7 +63,6 @@ public class SnapManager : MonoBehaviour
         {
             if (canSnap == true)
             {
-                Debug.Log(transformToSnap.GetComponent<Rigidbody>().isKinematic);
                 transformToSnap.transform.position = snappingPoint.transform.position;
                 transformToSnap.GetComponent<Rigidbody>().isKinematic = true;
                 parentToSnap.transform.SetParent(gameObject.transform);
@@ -53,22 +70,24 @@ public class SnapManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("Wrong Era");
             canSnap = false;
         }
     }
 
-    public void AllowSnapPartModern(WindmillInformation eraCheck)
+    public void AllowSnapPartModern()
     {
-        if (WindmillInformation.Era.MODERN == eraCheck.era)
+        if (otherEra == WindmillInformation.Era.MODERN)
         {
             if (canSnap == true)
             {
+                transformToSnap.transform.position = snappingPoint.transform.position;
                 transformToSnap.GetComponent<Rigidbody>().isKinematic = true;
-                Debug.Log(transformToSnap.GetComponent<Rigidbody>().isKinematic);
-                gameObject.transform.position = snappingPoint.transform.position;
                 parentToSnap.transform.SetParent(gameObject.transform);
             }
+        }
+        else
+        {
+            canSnap = false;
         }
     }
 }
