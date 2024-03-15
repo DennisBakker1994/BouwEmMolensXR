@@ -8,7 +8,7 @@ public class SnapManager : MonoBehaviour
     public bool canSnap;
     public GameObject parentToSnap;
     public GameObject snappingPoint;
-    public Transform transformToSnap;
+    public Transform partToSnap;
 
     public WindmillInformation.Part otherPart;
     public WindmillInformation.Era otherEra;
@@ -18,7 +18,7 @@ public class SnapManager : MonoBehaviour
 
         otherPart = other.gameObject.GetComponentInParent<WindmillInformation>().part;
         otherEra = other.gameObject.GetComponentInParent<WindmillInformation>().era;
-        transformToSnap = other.gameObject.transform;
+        partToSnap = other.gameObject.transform;
         CheckIfCanSnap();
     }
 
@@ -63,9 +63,15 @@ public class SnapManager : MonoBehaviour
         {
             if (canSnap == true)
             {
-                transformToSnap.transform.position = snappingPoint.transform.position;
-                transformToSnap.GetComponent<Rigidbody>().isKinematic = true;
-                parentToSnap.transform.SetParent(gameObject.transform);
+                partToSnap.transform.position = snappingPoint.transform.position;
+                partToSnap.GetComponent<Rigidbody>().isKinematic = true;
+                partToSnap.SetParent(parentToSnap.transform);
+                snappingPoint.GetComponent<SphereCollider>().enabled = false;
+
+                if (partToSnap.GetComponent<WindmillInformation>().part != WindmillInformation.Part.WINDMILLBLADES)
+                {
+                    partToSnap.GetComponentInChildren<SnapManager>().snappingPoint.GetComponent<SphereCollider>().enabled = true;
+                }
             }
         }
         else
@@ -80,8 +86,8 @@ public class SnapManager : MonoBehaviour
         {
             if (canSnap == true)
             {
-                transformToSnap.transform.position = snappingPoint.transform.position;
-                transformToSnap.GetComponent<Rigidbody>().isKinematic = true;
+                partToSnap.transform.position = snappingPoint.transform.position;
+                partToSnap.GetComponent<Rigidbody>().isKinematic = true;
                 parentToSnap.transform.SetParent(gameObject.transform);
             }
         }

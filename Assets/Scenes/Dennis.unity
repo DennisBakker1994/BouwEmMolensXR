@@ -567,7 +567,7 @@ GameObject:
   - component: {fileID: 192092695}
   - component: {fileID: 192092694}
   m_Layer: 7
-  m_Name: Oude 2 (Base) (1)
+  m_Name: Oude 2 (Base)
   m_TagString: Traditional
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -600,7 +600,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
-  m_Colliders: []
+  m_Colliders:
+  - {fileID: 192092701}
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -764,7 +765,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 80
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!23 &192092698
 MeshRenderer:
@@ -825,7 +826,7 @@ Transform:
   m_GameObject: {fileID: 192092693}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.5, y: 0, z: -1.5}
+  m_LocalPosition: {x: -2.5, y: 0, z: -2.5}
   m_LocalScale: {x: 0.05, y: 0.05, z: 0.05}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -900,7 +901,7 @@ MonoBehaviour:
   canSnap: 0
   parentToSnap: {fileID: 0}
   snappingPoint: {fileID: 0}
-  transformToSnap: {fileID: 0}
+  partToSnap: {fileID: 0}
   otherPart: 0
   otherEra: 0
 --- !u!1 &504125114
@@ -2004,6 +2005,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 943932128}
+  - component: {fileID: 943932130}
+  - component: {fileID: 943932129}
   m_Layer: 0
   m_Name: Attachment Point
   m_TagString: Untagged
@@ -2020,12 +2023,51 @@ Transform:
   m_GameObject: {fileID: 943932127}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.065, y: 1.5841873, z: 3.6600869}
+  m_LocalPosition: {x: -0.065, y: 1.5841873, z: 3.8}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1273584633}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &943932129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 943932127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10d8ab5cae71d06499b177be69607bb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canSnap: 0
+  parentToSnap: {fileID: 1469310639}
+  snappingPoint: {fileID: 943932127}
+  partToSnap: {fileID: 0}
+  otherPart: 1
+  otherEra: 0
+--- !u!135 &943932130
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 943932127}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1028674916
 GameObject:
   m_ObjectHideFlags: 0
@@ -2287,7 +2329,7 @@ MonoBehaviour:
   canSnap: 0
   parentToSnap: {fileID: 1469310639}
   snappingPoint: {fileID: 1201516139}
-  transformToSnap: {fileID: 0}
+  partToSnap: {fileID: 0}
   otherPart: 0
   otherEra: 0
 --- !u!1 &1273584626
@@ -2339,7 +2381,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
-  m_Colliders: []
+  m_Colliders:
+  - {fileID: 1273584634}
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -2564,7 +2607,7 @@ Transform:
   m_GameObject: {fileID: 1273584626}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.5, y: 1.541, z: -1.272}
+  m_LocalPosition: {x: -2.5, y: 1.541, z: -2.5}
   m_LocalScale: {x: 0.05, y: 0.05, z: 0.05}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -3135,7 +3178,7 @@ Transform:
   m_GameObject: {fileID: 919132149081644298}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -2.50325, y: 0.079209365, z: 0.44160008}
+  m_LocalPosition: {x: -2.5, y: 2.462, z: -2}
   m_LocalScale: {x: 0.05, y: 0.050000016, z: 0.050000016}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -3309,7 +3352,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
@@ -3326,7 +3369,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
-  m_Colliders: []
+  m_Colliders:
+  - {fileID: 3469287836582692890}
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
