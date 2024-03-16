@@ -13,13 +13,15 @@ public class SnapManager : MonoBehaviour
     public WindmillInformation.Part otherPart;
     public WindmillInformation.Era otherEra;
 
-    private void OnTriggerEnter(Collider other)
+    public void OnTriggerEnter(Collider other)
     {
-
-        otherPart = other.gameObject.GetComponentInParent<WindmillInformation>().part;
-        otherEra = other.gameObject.GetComponentInParent<WindmillInformation>().era;
-        partToSnap = other.gameObject.transform;
-        CheckIfCanSnap();
+        if (other.gameObject.tag == "Traditional" || other.gameObject.tag == "Modern")
+        {
+            otherPart = other.gameObject.GetComponentInParent<WindmillInformation>().part;
+            otherEra = other.gameObject.GetComponentInParent<WindmillInformation>().era;
+            partToSnap = other.gameObject.transform;
+            CheckIfCanSnap();
+        }
     }
 
     public void CheckIfCanSnap()
@@ -66,6 +68,13 @@ public class SnapManager : MonoBehaviour
                 partToSnap.transform.position = snappingPoint.transform.position;
                 partToSnap.GetComponent<Rigidbody>().isKinematic = true;
                 partToSnap.SetParent(parentToSnap.transform);
+                snappingPoint.GetComponent<SphereCollider>().enabled = false;
+
+                if (partToSnap.transform.parent)
+                {
+                    Debug.Log(parentToSnap.name);
+                }
+
                 snappingPoint.GetComponent<SphereCollider>().enabled = false;
 
                 if (partToSnap.GetComponent<WindmillInformation>().part != WindmillInformation.Part.WINDMILLBLADES)
