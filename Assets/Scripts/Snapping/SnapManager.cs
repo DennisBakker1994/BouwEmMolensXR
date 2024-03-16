@@ -88,7 +88,13 @@ public class SnapManager : MonoBehaviour
             {
                 partToSnap.transform.position = snappingPoint.transform.position;
                 partToSnap.GetComponent<Rigidbody>().isKinematic = true;
-                parentToSnap.transform.SetParent(gameObject.transform);
+                partToSnap.SetParent(parentToSnap.transform);
+                snappingPoint.GetComponent<SphereCollider>().enabled = false;
+
+                if (partToSnap.GetComponent<WindmillInformation>().part != WindmillInformation.Part.WINDMILLBLADES)
+                {
+                    partToSnap.GetComponentInChildren<SnapManager>().snappingPoint.GetComponent<SphereCollider>().enabled = true;
+                }
             }
         }
         else
