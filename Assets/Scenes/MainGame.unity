@@ -4577,6 +4577,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7988018570094308056, guid: 63b9356ec7f97f04498e0178211612a8,
         type: 3}
+      propertyPath: m_MovementType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7988018570094308056, guid: 63b9356ec7f97f04498e0178211612a8,
+        type: 3}
       propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -8645,6 +8650,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1340772556651480850, guid: 77bb1aff0e6713741be70e1ff10e54d7,
+        type: 3}
+      propertyPath: m_MovementType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3746633575551819431, guid: 77bb1aff0e6713741be70e1ff10e54d7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8699,6 +8709,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Oude 4 (Wieken)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8851951704877673091, guid: 77bb1aff0e6713741be70e1ff10e54d7,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 80
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14484,6 +14499,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1535343920068423730, guid: 844dead1183ef1344848e50902a6995c,
+        type: 3}
+      propertyPath: m_MovementType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1535343920068423730, guid: 844dead1183ef1344848e50902a6995c,
+        type: 3}
+      propertyPath: m_ForceGravityOnDetach
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1535343920068423730, guid: 844dead1183ef1344848e50902a6995c,
         type: 3}
       propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.size
