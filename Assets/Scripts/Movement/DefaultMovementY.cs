@@ -1,11 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Numerics;
-using Unity.VisualScripting;
-using UnityEditor.ShaderGraph;
+
 using UnityEngine;
-using UnityEngine.TextCore.Text;
-using UnityEngine.UIElements;
 
 public class DefaultMovementY : MonoBehaviour
 {
