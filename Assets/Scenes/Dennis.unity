@@ -1324,6 +1324,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 729900573}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &813052242 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6619997156897958156, guid: e9756a7846c2c2b4480fcab1cc621f26,
+    type: 3}
+  m_PrefabInstance: {fileID: 4255483184298478455}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10d8ab5cae71d06499b177be69607bb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &843003744
 GameObject:
   m_ObjectHideFlags: 0
@@ -2357,26 +2369,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2471835175746210295, guid: f5d9d4fb006f1e34280b8c6e4c9a3cb2,
-        type: 3}
-      propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2471835175746210295, guid: f5d9d4fb006f1e34280b8c6e4c9a3cb2,
-        type: 3}
-      propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: CheckIfCanSnap
-      objectReference: {fileID: 0}
-    - target: {fileID: 2471835175746210295, guid: f5d9d4fb006f1e34280b8c6e4c9a3cb2,
-        type: 3}
-      propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2471835175746210295, guid: f5d9d4fb006f1e34280b8c6e4c9a3cb2,
-        type: 3}
-      propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 3981953513631464463, guid: f5d9d4fb006f1e34280b8c6e4c9a3cb2,
         type: 3}
       propertyPath: m_Name
@@ -2431,11 +2423,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5532458716242001203, guid: f5d9d4fb006f1e34280b8c6e4c9a3cb2,
-        type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2536,12 +2523,12 @@ PrefabInstance:
     - target: {fileID: 4733521301484804014, guid: 923069b947e82a348af4e58f042607d0,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4733521301484804014, guid: 923069b947e82a348af4e58f042607d0,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4733521301484804014, guid: 923069b947e82a348af4e58f042607d0,
         type: 3}
@@ -2583,6 +2570,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6931238450846189812, guid: 923069b947e82a348af4e58f042607d0,
+        type: 3}
+      propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 813052242}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2609,12 +2601,12 @@ PrefabInstance:
     - target: {fileID: 6971685269553545292, guid: e9756a7846c2c2b4480fcab1cc621f26,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6971685269553545292, guid: e9756a7846c2c2b4480fcab1cc621f26,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.5
+      value: 0.616
       objectReference: {fileID: 0}
     - target: {fileID: 6971685269553545292, guid: e9756a7846c2c2b4480fcab1cc621f26,
         type: 3}

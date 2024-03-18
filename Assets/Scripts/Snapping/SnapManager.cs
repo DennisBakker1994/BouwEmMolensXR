@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class SnapManager : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class SnapManager : MonoBehaviour
     public GameObject parentToSnap;
     public GameObject snappingPoint;
     public Transform partToSnap;
+    public GameObject previousSnapManager;
 
     public WindmillInformation.Part otherPart;
     public WindmillInformation.Era otherEra;
@@ -20,13 +22,19 @@ public class SnapManager : MonoBehaviour
             otherPart = other.gameObject.GetComponentInParent<WindmillInformation>().part;
             otherEra = other.gameObject.GetComponentInParent<WindmillInformation>().era;
             partToSnap = other.gameObject.transform;
-            CheckIfCanSnap();
+            partToSnap.GetComponentInChildren<SnapManager>().previousSnapManager = this.gameObject;
         }
+    }
+
+    public void SetPreviousSnapManager()
+    {
+        previousSnapManager.GetComponent<SnapManager>().CheckIfCanSnap();
     }
 
     public void CheckIfCanSnap()
     {
         canSnap = false;
+
 
         if (this.GetComponentInParent<WindmillInformation>().part == WindmillInformation.Part.BOTTOM && otherPart == WindmillInformation.Part.TOP)
         {
@@ -67,14 +75,7 @@ public class SnapManager : MonoBehaviour
             {
                 partToSnap.transform.position = snappingPoint.transform.position;
                 partToSnap.GetComponent<Rigidbody>().isKinematic = true;
-                partToSnap.SetParent(parentToSnap.transform);
-                snappingPoint.GetComponent<SphereCollider>().enabled = false;
-
-                if (partToSnap.transform.parent)
-                {
-                    Debug.Log(parentToSnap.name);
-                }
-
+                partToSnap.SetParent(previousSnapManager.transform);
                 snappingPoint.GetComponent<SphereCollider>().enabled = false;
 
                 if (partToSnap.GetComponent<WindmillInformation>().part != WindmillInformation.Part.WINDMILLBLADES)
