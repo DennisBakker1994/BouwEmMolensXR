@@ -286,6 +286,27 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2705074185203423457, guid: d4a37a323b060cf43ac04af25260c83e,
+        type: 3}
+      propertyPath: m_TurnSpeed
+      value: 65
+      objectReference: {fileID: 0}
+    - target: {fileID: 2705074185203423457, guid: d4a37a323b060cf43ac04af25260c83e,
+        type: 3}
+      propertyPath: m_RightHandTurnAction.m_Reference
+      value: 
+      objectReference: {fileID: -6493913391331992944, guid: c348712bda248c246b8c49b3db54643f,
+        type: 3}
+    - target: {fileID: 2705074185203423457, guid: d4a37a323b060cf43ac04af25260c83e,
+        type: 3}
+      propertyPath: m_LeftHandTurnAction.m_UseReference
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2705074185203423457, guid: d4a37a323b060cf43ac04af25260c83e,
+        type: 3}
+      propertyPath: m_RightHandTurnAction.m_UseReference
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2863068254378755159, guid: d4a37a323b060cf43ac04af25260c83e,
         type: 3}
       propertyPath: m_ActionEvents.Array.size
