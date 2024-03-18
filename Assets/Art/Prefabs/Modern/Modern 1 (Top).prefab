@@ -190,7 +190,19 @@ MonoBehaviour:
       m_Calls: []
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 499357984446074300}
+        m_TargetAssemblyTypeName: SnapManager, Assembly-CSharp
+        m_MethodName: SetPreviousSnapManager
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_FirstFocusEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -373,5 +385,6 @@ MonoBehaviour:
   parentToSnap: {fileID: 0}
   snappingPoint: {fileID: 2111722812366254457}
   partToSnap: {fileID: 0}
+  previousSnapManager: {fileID: 0}
   otherPart: 1
   otherEra: 1

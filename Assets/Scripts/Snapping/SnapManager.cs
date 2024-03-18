@@ -28,7 +28,10 @@ public class SnapManager : MonoBehaviour
 
     public void SetPreviousSnapManager()
     {
-        previousSnapManager.GetComponent<SnapManager>().CheckIfCanSnap();
+        if (previousSnapManager != null)
+        {
+            previousSnapManager.GetComponent<SnapManager>().CheckIfCanSnap();
+        }
     }
 
     public void CheckIfCanSnap()
@@ -75,7 +78,10 @@ public class SnapManager : MonoBehaviour
             {
                 partToSnap.transform.position = snappingPoint.transform.position;
                 partToSnap.GetComponent<Rigidbody>().isKinematic = true;
-                partToSnap.SetParent(previousSnapManager.transform);
+                if (previousSnapManager != null)
+                {
+                    partToSnap.SetParent(previousSnapManager.transform);
+                }
                 snappingPoint.GetComponent<SphereCollider>().enabled = false;
 
                 if (partToSnap.GetComponent<WindmillInformation>().part != WindmillInformation.Part.WINDMILLBLADES)
@@ -98,7 +104,7 @@ public class SnapManager : MonoBehaviour
             {
                 partToSnap.transform.position = snappingPoint.transform.position;
                 partToSnap.GetComponent<Rigidbody>().isKinematic = true;
-                partToSnap.SetParent(parentToSnap.transform);
+                partToSnap.SetParent(previousSnapManager.transform);
                 snappingPoint.GetComponent<SphereCollider>().enabled = false;
 
                 if (partToSnap.GetComponent<WindmillInformation>().part != WindmillInformation.Part.WINDMILLBLADES)
