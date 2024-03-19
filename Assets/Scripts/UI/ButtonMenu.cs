@@ -5,12 +5,6 @@ using UnityEngine;
 
 public class ButtonMenu : MonoBehaviour
 {
-    
-    public void Play()
-    {
-
-    }
-
     public void Quit()
     {
         Application.Quit();
