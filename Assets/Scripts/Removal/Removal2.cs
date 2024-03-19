@@ -12,7 +12,7 @@ public class Removal2 : MonoBehaviour
     {
         
     }
-    public void DestroyPart()
+    [SerializeField] public void DestroyPart()
     {
         Destroy(part);
     }

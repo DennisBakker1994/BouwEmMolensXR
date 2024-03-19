@@ -257,6 +257,21 @@ PrefabInstance:
       propertyPath: m_Deactivated.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1900824208225932083, guid: e9756a7846c2c2b4480fcab1cc621f26,
+        type: 3}
+      propertyPath: m_Deactivated.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1900824208225932083, guid: e9756a7846c2c2b4480fcab1cc621f26,
+        type: 3}
+      propertyPath: m_Deactivated.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1900824208225932083, guid: e9756a7846c2c2b4480fcab1cc621f26,
+        type: 3}
+      propertyPath: m_Deactivated.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 3187560823347918216, guid: e9756a7846c2c2b4480fcab1cc621f26,
         type: 3}
       propertyPath: m_Name
@@ -344,7 +359,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c04d09cf611e0c47b4905f8752ff9ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  part: {fileID: 775847235}
+  part: {fileID: 0}
 --- !u!1001 &849137275
 PrefabInstance:
   m_ObjectHideFlags: 0
