@@ -1,12 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.XR.OpenXR.Input;
 
 public class Removal2 : MonoBehaviour
 {
-    public GameObject part;
-
-
+  [SerializeField] public GameObject part;
 
     void Start()
     {
@@ -16,9 +16,10 @@ public class Removal2 : MonoBehaviour
     {
         Destroy(part);
     }
-    
+
     void Update()
     {
         
     }
 }
+

@@ -35,6 +35,15 @@ public partial class @Movement: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Delete"",
+                    ""type"": ""Button"",
+                    ""id"": ""329e7bf1-7a1c-4fd3-904b-356ecf96c8f5"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -46,6 +55,17 @@ public partial class @Movement: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""UpAndDown"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c35f015c-40f4-4c4b-a930-13c701650ed6"",
+                    ""path"": ""<XRController>{RightHand}/{SecondaryButton}"",
+                    ""interactions"": ""Press"",
+                    ""processors"": """",
+                    ""groups"": ""XR"",
+                    ""action"": ""Delete"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -634,6 +654,7 @@ public partial class @Movement: IInputActionCollection2, IDisposable
         // Player
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
         m_Player_UpAndDown = m_Player.FindAction("UpAndDown", throwIfNotFound: true);
+        m_Player_Delete = m_Player.FindAction("Delete", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -708,11 +729,13 @@ public partial class @Movement: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_Player;
     private List<IPlayerActions> m_PlayerActionsCallbackInterfaces = new List<IPlayerActions>();
     private readonly InputAction m_Player_UpAndDown;
+    private readonly InputAction m_Player_Delete;
     public struct PlayerActions
     {
         private @Movement m_Wrapper;
         public PlayerActions(@Movement wrapper) { m_Wrapper = wrapper; }
         public InputAction @UpAndDown => m_Wrapper.m_Player_UpAndDown;
+        public InputAction @Delete => m_Wrapper.m_Player_Delete;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -725,6 +748,9 @@ public partial class @Movement: IInputActionCollection2, IDisposable
             @UpAndDown.started += instance.OnUpAndDown;
             @UpAndDown.performed += instance.OnUpAndDown;
             @UpAndDown.canceled += instance.OnUpAndDown;
+            @Delete.started += instance.OnDelete;
+            @Delete.performed += instance.OnDelete;
+            @Delete.canceled += instance.OnDelete;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -732,6 +758,9 @@ public partial class @Movement: IInputActionCollection2, IDisposable
             @UpAndDown.started -= instance.OnUpAndDown;
             @UpAndDown.performed -= instance.OnUpAndDown;
             @UpAndDown.canceled -= instance.OnUpAndDown;
+            @Delete.started -= instance.OnDelete;
+            @Delete.performed -= instance.OnDelete;
+            @Delete.canceled -= instance.OnDelete;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -915,6 +944,7 @@ public partial class @Movement: IInputActionCollection2, IDisposable
     public interface IPlayerActions
     {
         void OnUpAndDown(InputAction.CallbackContext context);
+        void OnDelete(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {
