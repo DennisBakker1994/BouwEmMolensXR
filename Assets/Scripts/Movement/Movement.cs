@@ -44,13 +44,22 @@ public partial class @Movement: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""NewUp"",
+                    ""type"": ""Value"",
+                    ""id"": ""3e3b4510-f045-497c-8685-7cb5217d75ad"",
+                    ""expectedControlType"": ""Axis"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
                 {
                     ""name"": """",
-                    ""id"": ""4fd3c533-2346-497a-92c0-da65c71d764d"",
-                    ""path"": ""<XRController>{LeftHand}/{Secondary2DAxisClick}"",
+                    ""id"": ""231bf163-e718-46ab-b518-c4b532743204"",
+                    ""path"": ""<XRController>{LeftHand}/{PrimaryButton}"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -68,6 +77,39 @@ public partial class @Movement: IInputActionCollection2, IDisposable
                     ""action"": ""Delete"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""1D Axis"",
+                    ""id"": ""697b14b1-0d88-4c97-9d49-67183d3b37b2"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""NewUp"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""db43749c-3ffd-41b8-ad56-3707cbc86e33"",
+                    ""path"": ""<XRController>{LeftHand}/{PrimaryButton}"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""NewUp"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""acaae575-575e-4d8f-8be3-6b319b21f600"",
+                    ""path"": ""<XRController>{LeftHand}/{SecondaryButton}"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""NewUp"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
                 }
             ]
         },
@@ -655,6 +697,7 @@ public partial class @Movement: IInputActionCollection2, IDisposable
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
         m_Player_UpAndDown = m_Player.FindAction("UpAndDown", throwIfNotFound: true);
         m_Player_Delete = m_Player.FindAction("Delete", throwIfNotFound: true);
+        m_Player_NewUp = m_Player.FindAction("NewUp", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -730,12 +773,14 @@ public partial class @Movement: IInputActionCollection2, IDisposable
     private List<IPlayerActions> m_PlayerActionsCallbackInterfaces = new List<IPlayerActions>();
     private readonly InputAction m_Player_UpAndDown;
     private readonly InputAction m_Player_Delete;
+    private readonly InputAction m_Player_NewUp;
     public struct PlayerActions
     {
         private @Movement m_Wrapper;
         public PlayerActions(@Movement wrapper) { m_Wrapper = wrapper; }
         public InputAction @UpAndDown => m_Wrapper.m_Player_UpAndDown;
         public InputAction @Delete => m_Wrapper.m_Player_Delete;
+        public InputAction @NewUp => m_Wrapper.m_Player_NewUp;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -751,6 +796,9 @@ public partial class @Movement: IInputActionCollection2, IDisposable
             @Delete.started += instance.OnDelete;
             @Delete.performed += instance.OnDelete;
             @Delete.canceled += instance.OnDelete;
+            @NewUp.started += instance.OnNewUp;
+            @NewUp.performed += instance.OnNewUp;
+            @NewUp.canceled += instance.OnNewUp;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -761,6 +809,9 @@ public partial class @Movement: IInputActionCollection2, IDisposable
             @Delete.started -= instance.OnDelete;
             @Delete.performed -= instance.OnDelete;
             @Delete.canceled -= instance.OnDelete;
+            @NewUp.started -= instance.OnNewUp;
+            @NewUp.performed -= instance.OnNewUp;
+            @NewUp.canceled -= instance.OnNewUp;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -945,6 +996,7 @@ public partial class @Movement: IInputActionCollection2, IDisposable
     {
         void OnUpAndDown(InputAction.CallbackContext context);
         void OnDelete(InputAction.CallbackContext context);
+        void OnNewUp(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {

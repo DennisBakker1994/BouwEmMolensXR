@@ -1,5 +1,6 @@
 
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class DefaultMovementY : MonoBehaviour
 {
@@ -7,6 +8,7 @@ public class DefaultMovementY : MonoBehaviour
     private UnityEngine.Vector3 move; 
     public CharacterController character;
     public float moveSpeed = 1f;
+
 
 
     public void Start()

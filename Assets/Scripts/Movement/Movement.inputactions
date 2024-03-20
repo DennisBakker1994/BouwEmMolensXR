@@ -22,13 +22,22 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "NewUp",
+                    "type": "Value",
+                    "id": "3e3b4510-f045-497c-8685-7cb5217d75ad",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
                 {
                     "name": "",
-                    "id": "4fd3c533-2346-497a-92c0-da65c71d764d",
-                    "path": "<XRController>{LeftHand}/{Secondary2DAxisClick}",
+                    "id": "231bf163-e718-46ab-b518-c4b532743204",
+                    "path": "<XRController>{LeftHand}/{PrimaryButton}",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -46,6 +55,39 @@
                     "action": "Delete",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "1D Axis",
+                    "id": "697b14b1-0d88-4c97-9d49-67183d3b37b2",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "NewUp",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "db43749c-3ffd-41b8-ad56-3707cbc86e33",
+                    "path": "<XRController>{LeftHand}/{PrimaryButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "NewUp",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "acaae575-575e-4d8f-8be3-6b319b21f600",
+                    "path": "<XRController>{LeftHand}/{SecondaryButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "NewUp",
+                    "isComposite": false,
+                    "isPartOfComposite": true
                 }
             ]
         },
