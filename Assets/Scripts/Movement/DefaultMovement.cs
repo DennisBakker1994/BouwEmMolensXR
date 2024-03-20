@@ -10,7 +10,7 @@ public class DefaultMovement : MonoBehaviour
 
     public void Up()
     {
-        //transform.position. = (0, 0.5f, 0); 
+        transform.position = new Vector3 (0, 0.5f, 0); 
     }
 
 

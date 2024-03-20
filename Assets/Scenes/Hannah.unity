@@ -442,7 +442,7 @@ PrefabInstance:
     - target: {fileID: 2863068254378755159, guid: d4a37a323b060cf43ac04af25260c83e,
         type: 3}
       propertyPath: m_ActionEvents.Array.size
-      value: 11
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 2863068254378755159, guid: d4a37a323b060cf43ac04af25260c83e,
         type: 3}
@@ -501,6 +501,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2863068254378755159, guid: d4a37a323b060cf43ac04af25260c83e,
         type: 3}
+      propertyPath: m_ActionEvents.Array.data[11].m_ActionId
+      value: 329e7bf1-7a1c-4fd3-904b-356ecf96c8f5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2863068254378755159, guid: d4a37a323b060cf43ac04af25260c83e,
+        type: 3}
       propertyPath: m_ActionEvents.Array.data[0].m_ActionName
       value: UI/Navigate[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
       objectReference: {fileID: 0}
@@ -556,12 +561,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2863068254378755159, guid: d4a37a323b060cf43ac04af25260c83e,
         type: 3}
+      propertyPath: m_ActionEvents.Array.data[11].m_ActionName
+      value: Player/Delete
+      objectReference: {fileID: 0}
+    - target: {fileID: 2863068254378755159, guid: d4a37a323b060cf43ac04af25260c83e,
+        type: 3}
       propertyPath: m_ActionEvents.Array.data[10].m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2863068254378755159, guid: d4a37a323b060cf43ac04af25260c83e,
         type: 3}
       propertyPath: m_ActionEvents.Array.data[10].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2863068254378755159, guid: d4a37a323b060cf43ac04af25260c83e,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[10].m_PersistentCalls.m_Calls.Array.data[1].m_Mode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2863068254378755159, guid: d4a37a323b060cf43ac04af25260c83e,
@@ -575,16 +590,33 @@ PrefabInstance:
       propertyPath: m_ActionEvents.Array.data[10].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2863068254378755159, guid: d4a37a323b060cf43ac04af25260c83e,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[10].m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5936929746432366956, guid: d4a37a323b060cf43ac04af25260c83e,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 849137276}
     - target: {fileID: 8764881177861915234, guid: d4a37a323b060cf43ac04af25260c83e,
         type: 3}
       propertyPath: m_Name
       value: XR Origin (XR Rig)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3455004462922886999, guid: d4a37a323b060cf43ac04af25260c83e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4a37a323b060cf43ac04af25260c83e, type: 3}
+--- !u!143 &849137276 stripped
+CharacterController:
+  m_CorrespondingSourceObject: {fileID: 918722091533414715, guid: d4a37a323b060cf43ac04af25260c83e,
+    type: 3}
+  m_PrefabInstance: {fileID: 849137275}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1576307094
 GameObject:
   m_ObjectHideFlags: 0
