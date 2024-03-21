@@ -12,11 +12,11 @@ public class DefaultMovement : MonoBehaviour
 
     public float _upAndDown;
 
-    //public void up()
-    //{
-    //    print("ik werk!");
-    //    transform.position += new vector3(0, 0.5f, 0);
-    //}
+    public void up()
+    {
+        print("ik werk!");
+        transform.position += new Vector3(0, 0.5f, 0);
+    }
 
     private void OnEnable()
     {
