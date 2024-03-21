@@ -4547,7 +4547,6 @@ GameObject:
   - component: {fileID: 918722091533414715}
   - component: {fileID: 8535051422240975422}
   - component: {fileID: 2705074185203423457}
-  - component: {fileID: 5936929746432366956}
   m_Layer: 6
   m_Name: XR Origin (XR Rig)
   m_TagString: Untagged
@@ -4685,19 +4684,7 @@ MonoBehaviour:
     m_ActionId: aba74823-9b2f-4671-a282-4b2746bc81e1
     m_ActionName: UI/TrackedDeviceOrientation
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5936929746432366956}
-        m_TargetAssemblyTypeName: DefaultMovement, Assembly-CSharp
-        m_MethodName: Up
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: 6ddab38b-1772-4c5e-afa8-3d2068337a13
     m_ActionName: Player/UpAndDown
   - m_PersistentCalls:
@@ -4747,7 +4734,7 @@ MonoBehaviour:
   m_GravityApplicationMode: 1
   m_ForwardSource: {fileID: 2605492879514144931}
   m_LeftHandMoveAction:
-    m_UseReference: 1
+    m_UseReference: 0
     m_Action:
       m_Name: Left Hand Move
       m_Type: 0
@@ -4858,21 +4845,6 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: -6493913391331992944, guid: c348712bda248c246b8c49b3db54643f,
       type: 3}
---- !u!114 &5936929746432366956
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8764881177861915234}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6787fc40817bb454394c4c00afd4c842, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 918722091533414715}
-  playerInput: {fileID: 2863068254378755159}
-  _upAndDown: 0
 --- !u!1 &9213818222922543813
 GameObject:
   m_ObjectHideFlags: 0
