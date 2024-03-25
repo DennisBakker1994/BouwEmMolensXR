@@ -8,6 +8,7 @@ TagManager:
   - Right Hand
   - Traditional
   - Modern
+  - Windmill
   layers:
   - Default
   - TransparentFX

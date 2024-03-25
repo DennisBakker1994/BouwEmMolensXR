@@ -7,7 +7,7 @@ public class SnapManager : MonoBehaviour
 {
     [Header("Variable")]
     public bool canSnap;
-    public GameObject parentToSnap;
+    public bool canBuildMode;
     public GameObject snappingPoint;
     public Transform partToSnap;
     public GameObject previousSnapManager;
@@ -88,6 +88,10 @@ public class SnapManager : MonoBehaviour
                 {
                     partToSnap.GetComponentInChildren<SnapManager>().snappingPoint.GetComponent<SphereCollider>().enabled = true;
                 }
+                else
+                {
+                    canBuildMode = true;
+                }
             }
         }
         else
@@ -110,6 +114,10 @@ public class SnapManager : MonoBehaviour
                 if (partToSnap.GetComponent<WindmillInformation>().part != WindmillInformation.Part.WINDMILLBLADES)
                 {
                     partToSnap.GetComponentInChildren<SnapManager>().snappingPoint.GetComponent<SphereCollider>().enabled = true;
+                }
+                else
+                {
+                    canBuildMode = true;
                 }
             }
         }
