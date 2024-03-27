@@ -22,6 +22,8 @@ public class AudioSettings : MonoBehaviour
     [Header("Object")]
     [SerializeField] private GameObject mainMenu;
 
+    private bool mMToBM;
+
     private void Start()
     {
         if (PlayerPrefs.HasKey("MasterVolume"))
@@ -53,6 +55,26 @@ public class AudioSettings : MonoBehaviour
 
     }
 
+    private void Update()
+    {
+        CheckMenuSwitch();
+    }
+
+    void CheckMenuSwitch() 
+    {
+        if (mainMenu.activeInHierarchy == false)
+        {
+            if (!mMToBM)
+            {
+                masterSliderIG.value = PlayerPrefs.GetFloat("MasterVolume");
+                musicSliderIG.value = PlayerPrefs.GetFloat("MusicVolume");
+                sfxSliderIG.value = PlayerPrefs.GetFloat("SFXVolume");
+                mMToBM = true;
+            }
+
+        }
+    }
+
     public void SetMasterVolume()
     {
         if(mainMenu.activeInHierarchy == true)
@@ -65,11 +87,11 @@ public class AudioSettings : MonoBehaviour
         }
         else
         {
-            float volumeMaster = masterSliderIG.value;
+                float volumeMaster = masterSliderIG.value;
 
-            audioMixer.SetFloat("MasterP", Mathf.Log10(volumeMaster) * 20);
+                audioMixer.SetFloat("MasterP", Mathf.Log10(volumeMaster) * 20);
 
-            PlayerPrefs.SetFloat("MasterVolume", volumeMaster);
+                PlayerPrefs.SetFloat("MasterVolume", volumeMaster);
         }
 
     }
@@ -86,11 +108,11 @@ public class AudioSettings : MonoBehaviour
         }
         else
         {
-            float volumeMusic = musicSliderIG.value;
+                float volumeMusic = musicSliderIG.value;
 
-            audioMixer.SetFloat("MusicP", Mathf.Log10(volumeMusic) * 20);
+                audioMixer.SetFloat("MusicP", Mathf.Log10(volumeMusic) * 20);
 
-            PlayerPrefs.SetFloat("MusicVolume", volumeMusic);
+                PlayerPrefs.SetFloat("MusicVolume", volumeMusic);
         }
     }
 
@@ -106,11 +128,11 @@ public class AudioSettings : MonoBehaviour
         }
         else 
         {
-            float volumeSfx = sfxSlider.value;
+                float volumeSfx = sfxSlider.value;
 
-            audioMixer.SetFloat("SfxP", Mathf.Log10(volumeSfx) * 20);
+                audioMixer.SetFloat("SfxP", Mathf.Log10(volumeSfx) * 20);
 
-            PlayerPrefs.SetFloat("SFXVolume", volumeSfx);
+                PlayerPrefs.SetFloat("SFXVolume", volumeSfx);
         }
     }
 
