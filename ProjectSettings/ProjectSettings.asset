@@ -137,7 +137,11 @@ PlayerSettings:
   vulkanEnableCommandBufferRecycling: 1
   loadStoreDebugModeEnabled: 0
   bundleVersion: 0.1.0
-  preloadedAssets: []
+  preloadedAssets:
+  - {fileID: 8170212194815849907, guid: 77c9ef2944901564da0cba4b436211af, type: 2}
+  - {fileID: 11400000, guid: 1b716a02c367ff34689726333eba792d, type: 2}
+  - {fileID: 11400000, guid: 4ed2ccea440b29d43a5483bed06f25c3, type: 2}
+  - {fileID: -6603364591005258157, guid: 0624322c41166fc4dbaf921d76d54ea9, type: 2}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -519,7 +523,7 @@ PlayerSettings:
     m_Automatic: 1
   - m_BuildTarget: AndroidPlayer
     m_APIs: 0b000000
-    m_Automatic: 0
+    m_Automatic: 1
   m_BuildTargetVRSettings: []
   m_DefaultShaderChunkSizeInMB: 16
   m_DefaultShaderChunkCount: 0
