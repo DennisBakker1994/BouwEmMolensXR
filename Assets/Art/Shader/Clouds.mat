@@ -90,8 +90,8 @@ Material:
     - _CastShadows: 0
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
-    - _CloudPower: 1
-    - _CloudScale: 100
+    - _CloudPower: 1.25
+    - _CloudScale: 1
     - _CloudTrans: 3
     - _Cull: 2
     - _Cutoff: 0.5
@@ -123,7 +123,7 @@ Material:
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _CloudSpeed: {r: 0.001, g: 0, b: 0, a: 0}
-    - _CloudsColor: {r: 5.5908804, g: 5.5908804, b: 5.5908804, a: 1}
+    - _CloudsColor: {r: 5.9921565, g: 4.6699567, b: 1.5715274, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _DistordSpeed: {r: 0.001, g: 0, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
