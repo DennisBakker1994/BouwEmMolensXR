@@ -5489,6 +5489,7 @@ MonoBehaviour:
   - {fileID: 1176008268}
   - {fileID: 1406262966}
   - {fileID: 2076816601}
+  - {fileID: 6995916674117127369}
   tutSlide: 0
 --- !u!114 &1465774757
 MonoBehaviour:
@@ -5858,6 +5859,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: MainMenu
       objectReference: {fileID: 0}
+    - target: {fileID: 8405278501456869758, guid: b785ffb99f963b347b5623c0bdc9dc8a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9105557573239233483, guid: b785ffb99f963b347b5623c0bdc9dc8a,
         type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -5885,6 +5891,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: DragMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 1903452317165057362, guid: a3380ddfc66284c46a1a75fc41eee2f4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2324436487128091020, guid: a3380ddfc66284c46a1a75fc41eee2f4,
         type: 3}
@@ -6016,6 +6027,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3380ddfc66284c46a1a75fc41eee2f4, type: 3}
+--- !u!1 &6995916674117127369 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4343970110734897144, guid: a3380ddfc66284c46a1a75fc41eee2f4,
+    type: 3}
+  m_PrefabInstance: {fileID: 6995916674117127368}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
