@@ -30,26 +30,6 @@ public class TutorialSlides : MonoBehaviour
         }
     }
 
-    public void ChangeIntMinus()
-    {
-
-        if (tutSlide == 0)
-        {
-            tutSlide = slides.Length -1;
-
-            SetAllToFalse();
-            slides[tutSlide].SetActive(true);
-
-        }
-        else
-        {
-            tutSlide--;
-
-            SetAllToFalse();
-            slides[tutSlide].SetActive(true);
-        }
-    }
-
     void SetAllToFalse()
     {
         foreach (GameObject go in slides)
