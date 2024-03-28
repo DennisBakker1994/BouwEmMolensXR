@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.XR.Interaction.Toolkit;
 
 public class SnapManager : MonoBehaviour
 {
@@ -13,14 +10,14 @@ public class SnapManager : MonoBehaviour
     public GameObject previousSnapManager;
 
     public WindmillInformation.Part otherPart;
-    public WindmillInformation.Era otherEra;
+    //public WindmillInformation.Era otherEra;
 
     public void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Windmill")
         {
             otherPart = other.gameObject.GetComponentInParent<WindmillInformation>().part;
-            otherEra = other.gameObject.GetComponentInParent<WindmillInformation>().era;
+            //otherEra = other.gameObject.GetComponentInParent<WindmillInformation>().era;
             partToSnap = other.gameObject.transform;
             partToSnap.GetComponentInChildren<SnapManager>().previousSnapManager = this.gameObject;
         }
