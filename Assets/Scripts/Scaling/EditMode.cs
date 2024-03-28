@@ -21,11 +21,24 @@ public class EditMode : MonoBehaviour
 
     public void ActivateBuildMode()
     {
+        TurnColliderOn();
 
+        if (GetComponent<BoxCollider>().enabled == true)
+        {
+
+        }
     }
 
     public void WindmillScaling()
     {
 
+    }
+
+    void TurnColliderOn()
+    {
+        for (int i = 0; windmillsToManipulate.Length > i; i++)
+        {
+            GetComponent<BoxCollider>().enabled = true;
+        }
     }
 }

@@ -76,6 +76,7 @@ PlayerSettings:
   androidMinimumWindowWidth: 400
   androidMinimumWindowHeight: 300
   androidFullscreenMode: 1
+  androidAutoRotationBehavior: 1
   defaultIsNativeResolution: 1
   macRetinaSupport: 1
   runInBackground: 0
@@ -136,12 +137,10 @@ PlayerSettings:
   vulkanEnableLateAcquireNextImage: 0
   vulkanEnableCommandBufferRecycling: 1
   loadStoreDebugModeEnabled: 0
+  visionOSBundleVersion: 1.0
+  tvOSBundleVersion: 1.0
   bundleVersion: 0.1.0
-  preloadedAssets:
-  - {fileID: 8170212194815849907, guid: 77c9ef2944901564da0cba4b436211af, type: 2}
-  - {fileID: 11400000, guid: 1b716a02c367ff34689726333eba792d, type: 2}
-  - {fileID: 11400000, guid: 4ed2ccea440b29d43a5483bed06f25c3, type: 2}
-  - {fileID: -6603364591005258157, guid: 0624322c41166fc4dbaf921d76d54ea9, type: 2}
+  preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
