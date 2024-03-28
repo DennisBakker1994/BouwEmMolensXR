@@ -184,6 +184,7 @@ MonoBehaviour:
   - {fileID: -7006718142759994610}
   m_renderMode: 1
   m_depthSubmissionMode: 0
+  m_optimizeBufferDiscards: 0
   m_symmetricProjection: 0
 --- !u!114 &-6114604109306104720
 MonoBehaviour:
@@ -340,6 +341,7 @@ MonoBehaviour:
   - {fileID: 5018373321130826544}
   m_renderMode: 1
   m_depthSubmissionMode: 0
+  m_optimizeBufferDiscards: 0
   m_symmetricProjection: 0
 --- !u!114 &-2351016679028978986
 MonoBehaviour:
@@ -665,6 +667,7 @@ MonoBehaviour:
   forceRemoveInternetPermission: 0
   symmetricProjection: 0
   systemSplashScreen: {fileID: 0}
+  optimizeBufferDiscards: 1
   lateLatchingMode: 0
   lateLatchingDebug: 0
 --- !u!114 &6109530112818774557

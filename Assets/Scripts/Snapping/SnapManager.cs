@@ -23,6 +23,20 @@ public class SnapManager : MonoBehaviour
         }
     }
 
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.transform.tag == "Windmill")
+        {
+            partToSnap.GetComponent<Rigidbody>().isKinematic = false;
+
+            partToSnap.SetParent(null);
+
+            snappingPoint.GetComponent<SphereCollider>().enabled = true;
+
+            canBuildMode = false;
+        }
+    }
+
     public void SetPreviousSnapManager()
     {
         if (previousSnapManager != null)
