@@ -67,9 +67,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canSnap: 0
-  parentToSnap: {fileID: 6897020963372905942}
+  canBuildMode: 0
   snappingPoint: {fileID: 3211486614033534216}
   partToSnap: {fileID: 0}
+  previousSnapManager: {fileID: 0}
   otherPart: 0
   otherEra: 0
 --- !u!1 &5692457837938953522
@@ -386,7 +387,7 @@ GameObject:
   - component: {fileID: 4217462814380276285}
   m_Layer: 0
   m_Name: Traditional Windmill 2
-  m_TagString: Untagged
+  m_TagString: Windmill
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

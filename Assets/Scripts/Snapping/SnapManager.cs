@@ -17,7 +17,7 @@ public class SnapManager : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Traditional" || other.gameObject.tag == "Modern")
+        if (other.gameObject.tag == "Windmill")
         {
             otherPart = other.gameObject.GetComponentInParent<WindmillInformation>().part;
             otherEra = other.gameObject.GetComponentInParent<WindmillInformation>().era;
@@ -42,88 +42,78 @@ public class SnapManager : MonoBehaviour
         if (this.GetComponentInParent<WindmillInformation>().part == WindmillInformation.Part.BOTTOM && otherPart == WindmillInformation.Part.TOP)
         {
             canSnap = true;
-           
-            if (this.GetComponentInParent<WindmillInformation>().era == WindmillInformation.Era.TRADITIONAL)
-            {
-                AllowSnapPartTraditional();
-            }
-
-            if (this.GetComponentInParent<WindmillInformation>().era == WindmillInformation.Era.MODERN)
-            {
-                AllowSnapPartModern();
-            }
+            
+            AllowSnapPart();
         }
 
         if (this.GetComponentInParent<WindmillInformation>().part == WindmillInformation.Part.TOP && otherPart == WindmillInformation.Part.WINDMILLBLADES)
         {
             canSnap = true;
+            
+            AllowSnapPart();
 
-            if (this.GetComponentInParent<WindmillInformation>().era == WindmillInformation.Era.TRADITIONAL)
-            {
-                AllowSnapPartTraditional();
-            }
-
-            if (this.GetComponentInParent<WindmillInformation>().era == WindmillInformation.Era.MODERN)
-            {
-                AllowSnapPartModern();
-            }
         }
     }
 
-    public void AllowSnapPartTraditional()
+    public void AllowSnapPart()
     {
-        if (otherEra == WindmillInformation.Era.TRADITIONAL)
-        {
-            if (canSnap == true)
-            {
-                partToSnap.transform.position = snappingPoint.transform.position;
-                partToSnap.GetComponent<Rigidbody>().isKinematic = true;
-                if (previousSnapManager != null)
-                {
-                    partToSnap.SetParent(previousSnapManager.transform);
-                }
-                snappingPoint.GetComponent<SphereCollider>().enabled = false;
 
-                if (partToSnap.GetComponent<WindmillInformation>().part != WindmillInformation.Part.WINDMILLBLADES)
-                {
-                    partToSnap.GetComponentInChildren<SnapManager>().snappingPoint.GetComponent<SphereCollider>().enabled = true;
-                }
-                else
-                {
-                    canBuildMode = true;
-                }
-            }
-        }
-        else
+        if (canSnap == true)
         {
-            canSnap = false;
-        }
-    }
+            partToSnap.transform.position = snappingPoint.transform.position;
+            partToSnap.GetComponent<Rigidbody>().isKinematic = true;
 
-    public void AllowSnapPartModern()
-    {
-        if (otherEra == WindmillInformation.Era.MODERN)
-        {
-            if (canSnap == true)
+            if (previousSnapManager != null)
             {
-                partToSnap.transform.position = snappingPoint.transform.position;
-                partToSnap.GetComponent<Rigidbody>().isKinematic = true;
                 partToSnap.SetParent(previousSnapManager.transform);
-                snappingPoint.GetComponent<SphereCollider>().enabled = false;
+            }
 
-                if (partToSnap.GetComponent<WindmillInformation>().part != WindmillInformation.Part.WINDMILLBLADES)
-                {
-                    partToSnap.GetComponentInChildren<SnapManager>().snappingPoint.GetComponent<SphereCollider>().enabled = true;
-                }
-                else
-                {
-                    canBuildMode = true;
-                }
+            snappingPoint.GetComponent<SphereCollider>().enabled = false;
+
+            if (partToSnap.GetComponent<WindmillInformation>().part != WindmillInformation.Part.WINDMILLBLADES)
+            {
+                partToSnap.GetComponentInChildren<SnapManager>().snappingPoint.GetComponent<SphereCollider>().enabled = true;
+            }
+            else
+            {
+                canBuildMode = true;
             }
         }
         else
         {
             canSnap = false;
         }
+
+
+        //if (otherEra == WindmillInformation.Era.TRADITIONAL)
+        //{
+        //    if (canSnap == true)
+        //    {
+        //        partToSnap.transform.position = snappingPoint.transform.position;
+        //        partToSnap.GetComponent<Rigidbody>().isKinematic = true;
+        //        if (previousSnapManager != null)
+        //        {
+        //            partToSnap.SetParent(previousSnapManager.transform);
+        //        }
+        //        snappingPoint.GetComponent<SphereCollider>().enabled = false;
+
+        //        if (partToSnap.GetComponent<WindmillInformation>().part != WindmillInformation.Part.WINDMILLBLADES)
+        //        {
+        //            partToSnap.GetComponentInChildren<SnapManager>().snappingPoint.GetComponent<SphereCollider>().enabled = true;
+        //        }
+        //        else
+        //        {
+        //            canBuildMode = true;
+        //        }
+        //    }
+        //    else
+        //    {
+        //        canSnap = false;
+        //    }
+        //}
+        //else
+        //{
+        //    canSnap = false;
+        //}
     }
 }

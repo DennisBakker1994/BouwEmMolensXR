@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 7833831539900126441}
   m_Layer: 7
   m_Name: Modern 2 (Top)
-  m_TagString: Modern
+  m_TagString: Windmill
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -382,7 +382,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canSnap: 0
-  parentToSnap: {fileID: 0}
+  canBuildMode: 0
   snappingPoint: {fileID: 7753600485915354802}
   partToSnap: {fileID: 0}
   previousSnapManager: {fileID: 0}
