@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class ButtonMenu : MonoBehaviour
 {
-    public AudioClip clip;
+    public AudioClip clipClick;
+    public AudioClip clipHover;
     public AudioSource audioSource; 
     public void Quit()
     {
@@ -14,7 +15,13 @@ public class ButtonMenu : MonoBehaviour
 
     public void ButtonClickSound()
     {
-        audioSource.clip = clip;
+        audioSource.clip = clipClick;
+        audioSource.Play();
+    }
+
+    public void ButtonHoverSounds()
+    {
+        audioSource.clip = clipHover;
         audioSource.Play();
     }
 }
